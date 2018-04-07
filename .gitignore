@@ -1,0 +1,14 @@
+/node_modules
+/public/storage
+/public/assets/*
+/resources/assets/frontend/fonts/*
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+composer.lock
+.env
+settings.json
+package-lock.json
