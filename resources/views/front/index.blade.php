@@ -179,198 +179,35 @@
 
 
                 <div class="owl-stage-outer">
-                    <div class="owl-stage"
-                         style="transform: translate3d(-2280px, 0px, 0px); transition: 0s; width: 6840px;">
-                        <div class="owl-item cloned" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li class="not_active"><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
+                    <div class="owl-stage" style="transform: translate3d(-2280px, 0px, 0px); transition: 0s; width: 6840px;">
+                        @foreach($reviews as $review)
+                            <div class="owl-item {{$loop->first ? 'active' : ''}}">
+                                <div class="main-slider__wrap_item item">
+                                    <div class="main-slider__wrap_item_icon" style="background-image: url('{{$review->user->photo}}');background-size: 80px 80px;">
+
+                                    </div>
+                                    <div class="main-slider__wrap_item_bord">
+                                        <div class="main-slider__wrap_item_name">{{$review->user->name}}</div>
+                                        <ul class="main-slider__wrap_item_rating">
+                                            <li class="{{$review->rate >= 1 ? '' : 'not_active'}}"><i class="fas fa-star"></i></li>
+                                            <li class="{{$review->rate >= 2 ? '' : 'not_active'}}"><i class="fas fa-star"></i></li>
+                                            <li class="{{$review->rate >= 3 ? '' : 'not_active'}}"><i class="fas fa-star"></i></li>
+                                            <li class="{{$review->rate >= 4 ? '' : 'not_active'}}"><i class="fas fa-star"></i></li>
+                                            <li class="{{$review->rate >= 5 ? '' : 'not_active'}}"><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p>
+                                            {{$review->content}}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item active" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li class="not_active"><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li class="not_active"><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 1140px;">
-                            <div class="main-slider__wrap_item item">
-                                <div class="main-slider__wrap_item_icon"><i class="icon-smiley"></i></div>
-                                <div class="main-slider__wrap_item_bord">
-                                    <div class="main-slider__wrap_item_name">Jon Doe</div>
-                                    <ul class="main-slider__wrap_item_rating">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Contrary to popular beliefece of classical Latin literature from 45 BC, making it
-                                        over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                        Virginia,
-                                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-                                        passage,
-                                        and going through the cites of the word in classical literature, discovered the
-                                        undoubtable
-                                        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                                        Bonorum
-                                        et Malorum"
-                                        (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the
-                                        Renaissance.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
                     </div>
                 </div>
                 <div class="owl-nav">
                     <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span>
                     </button>
                     <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-                </div>
-                <div class="owl-dots">
-                    <button role="button" class="owl-dot active"><span></span></button>
-                    <button role="button" class="owl-dot"><span></span></button>
                 </div>
             </div>
             <a href="http://wash.isolly.com/html/index.html#" class="button">Read more reviews</a>
